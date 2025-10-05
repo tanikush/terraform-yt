@@ -11,16 +11,24 @@ This is my daily Terraform practice where I learn and practice something new eve
 - ✅ String interpolation basics
 
 
-**Today's Progress (Day 2):**
+**Day 2 Complete:**
 - ✅ Created multiple .tf files (first.tf, second.tf, third.tf)
 - ✅ Learned variables and defaults
 - ✅ Practiced string interpolation
 - ✅ Learned CLI variable overrides
 - ✅ Tried different output formats
 
+**Today's Progress (Day 3):**
+- ✅ Terraform variables (tfvars files)
+- ✅ Environment variables (TF_VAR_)
+- ✅ Custom tfvars files
+- ✅ String functions (join, upper, lower, title, trim, replace, split, format, substring)
+- ✅ Lookup function
+- ✅ List variables
+
 ## 🏆 Today's Achievement
 
-**Day 2 Complete!** Today I cleared the concepts of variables and multiple files. Also learned how to override variables from CLI!
+**Day 3 Complete!** Today I mastered Terraform functions and advanced variable techniques. Learned string manipulation and environment variables!
 
 A structured approach to learning Terraform from basics to advanced concepts.
 
@@ -30,11 +38,16 @@ A structured approach to learning Terraform from basics to advanced concepts.
 terraform-yt/
 ├── Day 1/          # Terraform Basics & Outputs
 │   └── first.tf    # Data types, expressions, basic outputs
-└── Day 2/          # Variables & Multiple Files
-    ├── first.tf    # Basic output block
-    ├── second.tf   # Second output block  
-    ├── third.tf    # Third output block
-    └── variable.tf # Variables and string interpolation
+├── Day 2/          # Variables & Multiple Files
+│   ├── first.tf    # Basic output block
+│   ├── second.tf   # Second output block  
+│   ├── third.tf    # Third output block
+│   └── variable.tf # Variables and string interpolation
+└── Day 3/          # Functions & Advanced Variables
+    ├── tf-var/     # Terraform variables
+    ├── env-variable/ # Environment variables
+    ├── tf-var-custom/ # Custom tfvars files
+    └── Function/   # String functions & lookup
 ```
 
 ## 📚 Learning Progress
@@ -69,6 +82,24 @@ terraform-yt/
 - Multiple greeting formats
 - CLI variable override examples included
 
+### Day 3: Functions & Advanced Variables
+**Files:** `Day 3/*/*.tf`
+
+**Concepts Covered:**
+- Terraform variables without defaults (required input)
+- Environment variables with `TF_VAR_` prefix
+- Custom `.tfvars` files (development.tfvars)
+- String functions: `join()`, `upper()`, `lower()`, `title()`
+- String manipulation: `trim()`, `trimspace()`, `replace()`, `split()`
+- Advanced functions: `format()`, `substr()`, `lookup()`
+- List variables and indexing
+
+**Key Features:**
+- Environment variable setup: `set TF_VAR_username=value`
+- String function chaining and manipulation
+- Custom tfvars for different environments
+- Function outputs with practical examples
+
 ## 🛠️ How to Run
 
 ### Day 1
@@ -90,6 +121,25 @@ terraform apply
 **Override variables:**
 ```bash
 terraform plan -var "username=YourName" -var "age=25"
+```
+
+### Day 3
+```bash
+cd "Day 3/tf-var"
+terraform init
+terraform plan
+terraform apply
+```
+
+**Environment variables:**
+```bash
+set TF_VAR_username=YourName
+terraform plan
+```
+
+**Custom tfvars:**
+```bash
+terraform plan -var-file="development.tfvars"
 ```
 
 ## 📖 Key Learnings
@@ -117,11 +167,11 @@ output "greeting" {
 
 ## 🎯 Next Steps
 
-- Day 3: Locals & Functions
 - Day 4: Conditionals & Loops
 - Day 5: Data Sources
 - Day 6: Modules
 - Day 7: State Management
+- Day 8: Providers & Remote State
 
 ## 💡 Tips
 

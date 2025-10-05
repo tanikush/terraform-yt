@@ -1,8 +1,10 @@
 variable "username" {
+  type = string
   default = "Masti"
 }
 
 variable "age" {
+  type = number
   default = 20
 }
 
